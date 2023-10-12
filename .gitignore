@@ -1,0 +1,9 @@
+Ray/Debug/*
+Ray/Release/*
+Ray/x64/*
+
+Ray/Ray/Debug/*
+Ray/Ray/Release/*
+Ray/Ray/x64/*
+
+Ray/.vs/*
