@@ -18,9 +18,6 @@
     <ClCompile Include="PPM_image.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vec3.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vec3.h">
@@ -39,6 +36,24 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="rtweekend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="interval.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="material.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lambertian.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="metal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dielectric.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
