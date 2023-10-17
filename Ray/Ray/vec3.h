@@ -27,6 +27,8 @@ public:
 		return *this;
 	}
 
+
+
 	vec3& operator *=(const double t) {
 		e[0] *= t;
 		e[1] *= t;

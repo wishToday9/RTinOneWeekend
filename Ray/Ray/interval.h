@@ -10,6 +10,9 @@ public:
 
 	interval(double _min, double _max) : min(_min), max(_max) {}
 
+
+	interval(const interval& a, const interval& b) : min(fmin(a.min, b.min)), max(fmax(a.max, b.max)) {}
+
 	bool contains(double x) const {
 		return min <= x && x <= max;
 	}
@@ -25,6 +28,15 @@ public:
 			return max;
 		else
 			return x;
+	}
+
+	double size() const {
+		return max - min;
+	}
+
+	interval expand(double delta) const {
+		auto padding = delta / 2;
+		return interval(min - padding, max + padding);
 	}
 
 	static const interval empty, universe;

@@ -21,12 +21,17 @@ public:
 	}
 	void add(shared_ptr<hittable> obj) {
 		objects.push_back(obj);
+		bbox = aabb(bbox, obj->bounding_box());
+		
 	}
 	virtual bool hit(const ray& r, interval ray_t, hit_record& rec) const override;
+	aabb bounding_box() const override {
+		return bbox;
+	}
 
 public:
 	std::vector<shared_ptr<hittable>> objects;
-
+	aabb bbox;
 };
 
 bool hittable_list::hit(const ray& r, interval ray_t, hit_record& rec) const {

@@ -16,7 +16,7 @@ public:
 
 		if (refraction_ratio * sin_theta > 1.0) {
 			vec3 reflected = reflect(unit_direction, rec.normal);
-			scattered = ray(rec.p, reflected);
+			scattered = ray(rec.p, reflected, r_in.time());
 			return true;
 		}
 
@@ -24,12 +24,12 @@ public:
 		if (random_double() < reflect_prob)
 		{
 			vec3 reflected = reflect(unit_direction, rec.normal);
-			scattered = ray(rec.p, reflected);
+			scattered = ray(rec.p, reflected, r_in.time());
 			return true;
 		}
 
 		vec3 refracted = refract(unit_direction, rec.normal, refraction_ratio);
-		scattered = ray(rec.p, refracted);
+		scattered = ray(rec.p, refracted, r_in.time());
 		return true;
 	}
 private:
